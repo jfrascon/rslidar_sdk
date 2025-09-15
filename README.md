@@ -2,6 +2,12 @@
 
  [中文介绍](README_CN.md)
 
+This repository is a fork of the repository [RoboSense-LiDAR/rslidar_sdk](https://github.com/RoboSense-LiDAR/rslidar_sdk).
+
+Robosense's official repositories rarely merge pull requests submitted by the developer community, even when they fix critical issues or contribute valuable improvements. As a result, maintaining our own fork and applying necessary fixes or enhancements independently has become essential.
+
+**Important: We must regularly monitor the upstream repository to stay up to date with any new features, changes, or bug fixes, and integrate them into our fork when relevant.**
+
 ## 1 Introduction
 
 **rslidar_sdk** is the Software Development Kit of the RoboSense Lidar based on Ubuntu. It contains:
