@@ -6,7 +6,7 @@ project(rslidar_sdk)
 # Custom Point Type (XYZI,XYZIRT, XYZIF, XYZIRTF)
 #=======================================
 set(POINT_TYPE "XYZI" CACHE STRING "Point type")
-set_property(CACHE POINT_TYPE PROPERTY STRINGS "XYZI" "XYZIRT")
+set_property(CACHE POINT_TYPE PROPERTY STRINGS "XYZI" "XYZIRT" "XYZIF" "XYZIRTF")
 
 # Allowed values for POINT_TYPE
 set(_allowed XYZI XYZIRT XYZIF XYZIRTF)
