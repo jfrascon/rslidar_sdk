@@ -12,7 +12,7 @@ set_property(CACHE POINT_TYPE PROPERTY STRINGS "XYZI" "XYZIRT" "XYZIF" "XYZIRTF"
 set(_allowed XYZI XYZIRT XYZIF XYZIRTF)
 
 if(NOT POINT_TYPE IN_LIST _allowed)
-  message(FATAL_ERROR "POINT_TYPE='${POINT_TYPE}' must be one of: ${_allowed}")
+  message(FATAL_ERROR "POINT_TYPE must be one of: ${_allowed}. Got: ${POINT_TYPE}")
 endif()
 
 option(ENABLE_TRANSFORM "Enable transform functions" OFF)
