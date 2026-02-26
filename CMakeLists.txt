@@ -5,14 +5,14 @@ project(rslidar_sdk)
 #=======================================
 # Custom Point Type (XYZI,XYZIRT, XYZIF, XYZIRTF)
 #=======================================
-set(POINT_TYPE "XYZI" CACHE STRING "Point type")
-set_property(CACHE POINT_TYPE PROPERTY STRINGS "XYZI" "XYZIRT" "XYZIF" "XYZIRTF")
-
 # Allowed values for POINT_TYPE
-set(_allowed XYZI XYZIRT XYZIF XYZIRTF)
+set(allowed_point_types XYZI XYZIRT XYZIF XYZIRTF)
+set(POINT_TYPE "XYZI" CACHE STRING "Point type")
+# Restrict cache UI choices for POINT_TYPE (e.g., ccmake/CMake GUI).
+set_property(CACHE POINT_TYPE PROPERTY STRINGS ${allowed_point_types})
 
-if(NOT POINT_TYPE IN_LIST _allowed)
-  message(FATAL_ERROR "POINT_TYPE must be one of: ${_allowed}. Got: ${POINT_TYPE}")
+if(NOT POINT_TYPE IN_LIST allowed_point_types)
+  message(FATAL_ERROR "POINT_TYPE must be one of: ${allowed_point_types}. Got: ${POINT_TYPE}")
 endif()
 
 option(ENABLE_TRANSFORM "Enable transform functions" OFF)
@@ -214,4 +214,3 @@ if(rclcpp_FOUND)
   ament_package()
 
 endif(rclcpp_FOUND)
-
